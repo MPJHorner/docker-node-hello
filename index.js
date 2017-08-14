@@ -9,6 +9,9 @@ var app = express();
 app.get('/', function (req, res) {
   res.send('Hello World\n');
 });
+app.get('/env', function (req, res) {
+  res.send('The ENV is set to' + process.env.ENV);
+});
 
 app.listen(PORT)
 console.log('Running on http://localhost:' + PORT);
